@@ -1,0 +1,24 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage
+  description: An example of a Backstage application.
+spec:
+  type: website
+  # owner: stoctoct@gmail.com
+  lifecycle: experimental
+
+# ---
+# apiVersion: backstage.io/v1alpha1
+# kind: User
+# metadata:
+#   name: stoctoct
+#   description: Stoctoct, a contributor in the project
+# spec:
+#   profile:
+#     displayName: stoctoct
+#     email: stoctoct@gmail.com
+#   memberOf:
+#     - team-a
+#     - team-b
