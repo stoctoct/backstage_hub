@@ -22,7 +22,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import React, { CSSProperties, PropsWithChildren, ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from '../../components/Link';
+import { Link } from '../../core_components/Link';
 import { Breadcrumbs } from '../Breadcrumbs';
 import { useContent } from '../Sidebar';
 

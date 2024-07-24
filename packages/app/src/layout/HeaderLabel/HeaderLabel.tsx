@@ -18,7 +18,7 @@ import Grid from '@material-ui/core/Grid';
 import { alpha, makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import React, { PropsWithChildren } from 'react';
-import { Link } from '../../components/Link';
+import { Link } from '../../core_components/Link';
 
 /** @public */
 export type HeaderLabelClassKey = 'root' | 'label' | 'value';

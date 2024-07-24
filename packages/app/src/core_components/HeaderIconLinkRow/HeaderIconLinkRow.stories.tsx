@@ -15,27 +15,34 @@
  */
 
 import React from 'react';
-import { ResponseErrorPanel } from '../ResponseErrorPanel';
-import { ErrorPanelProps } from '../ErrorPanel';
+import { HeaderIconLinkRow } from '.';
+import { IconLinkVerticalProps } from './IconLinkVertical';
+
+type Props = {
+  links: IconLinkVerticalProps[];
+};
 
 export default {
-  title: 'Data Display/ResponseErrorPanel',
-  component: ResponseErrorPanel,
+  title: 'Data Display/HeaderIconLinkRow',
+  component: HeaderIconLinkRow,
 };
 
-export const Default = (args: ErrorPanelProps) => (
-  <ResponseErrorPanel {...args} />
-);
+export const Default = (args: Props) => <HeaderIconLinkRow {...args} />;
 Default.args = {
-  error: new Error('Error message from error object'),
-  defaultExpanded: false,
-};
-
-export const WithTitle = (args: ErrorPanelProps) => (
-  <ResponseErrorPanel {...args} />
-);
-WithTitle.args = {
-  error: new Error('test'),
-  defaultExpanded: false,
-  title: 'Title prop is passed',
+  links: [
+    {
+      color: 'primary',
+      disabled: false,
+      href: 'https://google.com',
+      label: 'primary',
+      title: 'title',
+    },
+    {
+      color: 'secondary',
+      disabled: false,
+      href: 'https://google.com',
+      label: 'secondary',
+      title: 'title-2',
+    },
+  ],
 };

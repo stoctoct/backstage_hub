@@ -28,7 +28,7 @@ import {
   TableColumn,
   TrendLine,
   Link,
-} from '../../components';
+} from '../../core_components';
 import { Content } from '../Content';
 import { ContentHeader } from '../ContentHeader';
 import { Header } from '../Header';

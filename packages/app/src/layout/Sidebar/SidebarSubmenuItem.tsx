@@ -19,7 +19,7 @@ import { resolvePath, useLocation, useResolvedPath } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
-import { Link } from '../../components/Link';
+import { Link } from '../../core_components/Link';
 import { IconComponent } from '@backstage/core-plugin-api';
 import classnames from 'classnames';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';

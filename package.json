@@ -24,7 +24,8 @@
     "prettier:check": "prettier --check .",
     "new": "backstage-cli new --scope internal",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_aa6c97b4c917d32"
   },
   "workspaces": {
     "packages": [

@@ -20,7 +20,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import ArrowIcon from '@material-ui/icons/ArrowForward';
 import React from 'react';
-import { Link } from '../../components/Link';
+import { Link } from '../../core_components/Link';
 
 /** @public */
 export type BottomLinkClassKey = 'root' | 'boxTitle' | 'arrow';

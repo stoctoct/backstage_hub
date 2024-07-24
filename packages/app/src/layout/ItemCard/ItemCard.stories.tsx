@@ -22,7 +22,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { LinkButton } from '../../components/LinkButton/LinkButton';
+import { LinkButton } from '../../core_components/LinkButton/LinkButton';
 import { ItemCardGrid } from './ItemCardGrid';
 import { ItemCardHeader } from './ItemCardHeader';
 

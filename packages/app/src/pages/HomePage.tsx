@@ -1,7 +1,7 @@
 
 import React, { PropsWithChildren, ComponentProps } from 'react';
 
-import { Link } from '../components/Link';
+import { Link } from '../core_components/Link';
 // import { Header } from '../../layout/Header';
 import { HeaderLabel } from '../layout/HeaderLabel';
 // import { Page } from '../../layout/Page';
@@ -10,6 +10,7 @@ import { renderInTestApp, TestApiProvider } from '@backstage/test-utils';
 import { configApiRef } from '@backstage/core-plugin-api';
 import { ConfigReader } from '@backstage/core-app-api';
 import { Page, Header, Content, TrendLine, GaugeCard } from '@backstage/core-components';
+import { LineChart } from '../components'
 // import {  } from '@backstage/core-components';
 
 // import { Chart, LineSeries, Axis, Tooltip } from '@backstage/core-components';
@@ -19,11 +20,14 @@ const linkText = "링크 컴포넌트 테스트(네이버)"
 
 const CustomGaugeCard = () => {
   return (
-    <GaugeCard
-      title="GKE 사용 량"
-      subheader="This should be above 75%"
-      progress={0.87}
-    />
+      <div style={{ height: '300px'}}>
+        <GaugeCard
+          title="GKE 사용 량"
+          subheader="This should be above 75%"
+          progress={0.87}
+        />
+      </div>
+      
   )
 }
           
@@ -54,38 +58,53 @@ export const HomePage = () => {
   const customOnClick = () => {
     console.log("온 클릭")
   }
-  return (<div>
-    
-    <ExampleHeader />
-    <br></br>
-    <TrendLineComponent />
-    <br></br>
-    <CustomGaugeCard />
-    <br></br>
-    <TestApiProvider
-      apis={[[configApiRef, new ConfigReader({ app: { title: 'Blah' } })]]}
-    >
-      <Header title="toll title" type="tool" typeLink="/tool" />,
-    </TestApiProvider>
-    <br />
-    <br />
-    <Link 
-      style={{marginLeft: '20px', fontSize: '18px', fontWeight: 'bold'}}
-      to="https://www.naver.com" 
-      onClick={customOnClick} noTrack
-    >
-      {linkText}
-    
-    </Link>
 
-    <br />
-    <br />
-    <Page themeId="tool">
-      <Header title="Custom Catalog123" subtitle="This is a custom catalog page" />
+  return (<div>
+
+    <Page themeId="home">
+      <ExampleHeader />
       <Content>
-        컨텐트
+      <div style={{ display: 'flex' }}>
+        <div style={{ marginRight: '100px' }}>
+        <TrendLineComponent />
+        </div>
+        <div>
+        <CustomGaugeCard />
+        </div>
+      </div>
+        
+      
+      
+      <br></br>
+      {/* <TestApiProvider
+        apis={[[configApiRef, new ConfigReader({ app: { title: 'Blah' } })]]}
+      >
+        <Header title="toll title" type="tool" typeLink="/tool" />,
+      </TestApiProvider> */}
+      <br />
+      <br />
+      <Link 
+        style={{marginLeft: '20px', fontSize: '18px', fontWeight: 'bold'}}
+        to="https://www.naver.com" 
+        onClick={customOnClick} noTrack
+      >
+        {linkText}
+      </Link>
+      <br />
+      <br />
+      <Page themeId="tool">
+        <Header title="Custom Catalog123" subtitle="This is a custom catalog page" />
+        <Content>
+          컨텐트          
+          <LineChart
+            style={{width:'50vw', height: '800px'}}
+          />
+        </Content>
+      </Page>
       </Content>
     </Page>
+
+    
   </div>)
 };
 

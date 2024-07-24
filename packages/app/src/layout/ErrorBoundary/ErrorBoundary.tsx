@@ -16,8 +16,8 @@
 
 import Typography from '@material-ui/core/Typography';
 import React, { ComponentClass, Component, ErrorInfo } from 'react';
-import { LinkButton } from '../../components/LinkButton';
-import { ErrorPanel } from '../../components/ErrorPanel';
+import { LinkButton } from '../../core_components/LinkButton';
+import { ErrorPanel } from '../../core_components/ErrorPanel';
 import { coreComponentsTranslationRef } from '../../translation';
 import { useTranslationRef } from '@backstage/core-plugin-api/alpha';
 

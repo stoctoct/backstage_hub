@@ -9,7 +9,6 @@ import {
 import NanumPen from '../assets/fonts/NanumPen.ttf';
 import NanumBrush from '../assets/fonts/NanumBrush.ttf'
 
-
 export const myTheme = createUnifiedTheme({
   ...createBaseThemeOptions({
     palette: {
@@ -33,7 +32,7 @@ export const myTheme = createUnifiedTheme({
         main: '#485e30',
       },
       background: {
-        default: '#d5d6db',
+        // default: '#d5d6db',
         paper: '#d5d6db',
       },
       banner: {

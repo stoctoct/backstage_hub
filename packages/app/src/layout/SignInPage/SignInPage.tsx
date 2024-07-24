@@ -26,7 +26,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import React, { useState } from 'react';
 import { useMountEffect } from '@react-hookz/web';
-import { Progress } from '../../components/Progress';
+import { Progress } from '../../core_components/Progress';
 import { Content } from '../Content/Content';
 import { ContentHeader } from '../ContentHeader/ContentHeader';
 import { Header } from '../Header';

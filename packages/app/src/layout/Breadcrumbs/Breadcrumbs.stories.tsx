@@ -23,7 +23,7 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import React, { Fragment } from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { Link } from '../../components/Link';
+import { Link } from '../../core_components/Link';
 import { Header } from '../Header';
 import { Page } from '../Page';
 import { Breadcrumbs } from './Breadcrumbs';

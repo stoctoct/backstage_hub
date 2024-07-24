@@ -16,7 +16,7 @@
 
 import React from 'react';
 import { ErrorPage } from './ErrorPage';
-import { Link } from '../../components/Link';
+import { Link } from '../../core_components/Link';
 import { renderInTestApp } from '@backstage/test-utils';
 
 describe('<ErrorPage/>', () => {
