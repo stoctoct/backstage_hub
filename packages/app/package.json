@@ -30,6 +30,7 @@
     "@backstage/plugin-catalog-react": "^1.12.1",
     "@backstage/plugin-cost-insights": "^0.12.24",
     "@backstage/plugin-home": "^0.7.7",
+    "@backstage/plugin-kubernetes": "^0.11.12",
     "@backstage/plugin-org": "^0.6.26",
     "@backstage/plugin-permission-react": "^0.4.23",
     "@backstage/plugin-scaffolder": "^1.21.0",
