@@ -108,14 +108,16 @@ export const LineChart = ({
   };
 
   return (
+    <div style={{
+      backgroundColor: backgroundColor,
+      width: inputWidht,
+      height: inputHeight
+    }}>
     <Line 
-      style={{
-        backgroundColor: backgroundColor,
-        width: inputWidht,
-        height: inputHeight
-      }}
       data={chartData}
-      options={options ? options : sampleOptions} />
+      options={options ? options : sampleOptions} />  
+    </div>
+    
   )
 }
 // export const LineChart = () => <Line data={data} options={options} />
