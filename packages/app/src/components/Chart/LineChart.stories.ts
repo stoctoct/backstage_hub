@@ -15,23 +15,14 @@ const meta = {
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
-    // data: ChartData
+    backgroundColor: { control: 'color' },
+    lineColor: { control: 'color' },
+    markerColor: { control: 'color' },
+    // style: {control: 'object'}
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
+  // args: { onClick: fn() },
 } satisfies Meta<typeof LineChart>;
-
-// argTypes: {
-//   backgroundColor: { control: 'color' },
-// },
-
-// export interface ButtonProps {
-//   primary?: boolean;
-//   backgroundColor?: string;
-//   size?: 'small' | 'medium' | 'large';
-//   label: string;
-//   onClick?: () => void;
-// }
 
 
 export default meta;
@@ -39,7 +30,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    // primary: true,
-    // label: 'Button',
+    label: '라인 그래프',
+    width: '600px',
+    data: [4000, 3000, 2000, 2780, 1890],
+    lineColor : '#8884d8', 
+    markerColor : '#8884d8'
   },
 };
+
+  // const inputLineColor = lineColor ? lineColor : '#8884d8'
+  // const inputMarkerColor = markerColor ? markerColor : '#8884d8'

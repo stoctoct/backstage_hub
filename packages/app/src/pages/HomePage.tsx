@@ -96,7 +96,8 @@ export const HomePage = () => {
         <Content>
           컨텐트          
           <LineChart
-            style={{width:'50vw', height: '800px'}}
+            label='라인그래프'
+            // style={{width:'50vw', height: '800px'}}
           />
         </Content>
       </Page>

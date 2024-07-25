@@ -5,6 +5,21 @@ import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement
 // Chart.js 모듈 등록
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Tooltip, Legend);
 
+export interface LineChartProps {
+  // title?: string,
+  width? :string;
+  height? :string;
+  // style?: React.CSSProperties;
+  data?: number[];
+  lineColor? :string;
+  markerColor? :string;
+  label: string;
+  options?: ChartOptions;
+  backgroundColor? :string;
+
+  // onClick?: () => void;
+}
+  
 // 데이터 타입 정의
 export interface ChartData {
   labels: string[];
@@ -24,6 +39,7 @@ export interface ChartOptions {
   plugins: {
     legend: {
       position: 'top';
+      align: 'start'
     };
     tooltip: {
       callbacks: {
@@ -31,14 +47,6 @@ export interface ChartOptions {
       };
     };
   };
-}
-
-export interface LineChartProps {
-  title?: string,
-  style?: React.CSSProperties;
-  data?: ChartData;
-  options?: ChartOptions;
-  onClick?: () => void;
 }
 
 export const sampleData: ChartData = {
@@ -61,6 +69,7 @@ const sampleOptions: ChartOptions = {
   plugins: {
     legend: {
       position: 'top',
+      align: 'start'
     },
     tooltip: {
       callbacks: {
@@ -72,19 +81,27 @@ const sampleOptions: ChartOptions = {
   },
 };
 
-export const LineChart:React.FC<LineChartProps> = ({ title, style, data, options }) => { 
+export const LineChart = ({ 
+  label, data, options, lineColor, markerColor, backgroundColor, width, height,
+
+ }:LineChartProps) => { 
   // console.log("스타일", style === undefined)
   // 샘플 데이터
-
+  
+  const inputData = data ? data : [4000, 3500, 2000, 2780, 1000]
+  const inputLineColor = lineColor ? lineColor : '#8884d8'
+  const inputMarkerColor = markerColor ? markerColor : '#8884d8'
+  const inputWidht = width ? width : '600px'
+  const inputHeight = height ? height : '450px'
   const chartData: ChartData = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
     datasets: [
       {
-        label: title ? title : "라인 그래프 제목",
-        data: [4000, 3500, 2000, 2780, 1000],
+        label: label ? label : "라인 그래프 라벨",
+        data: inputData,
         fill: true,
-        backgroundColor: '#8884d8',
-        borderColor: '#8884d8',
+        backgroundColor: inputMarkerColor,
+        borderColor: inputLineColor,
         tension: 0.1,
       },
     ],
@@ -92,8 +109,11 @@ export const LineChart:React.FC<LineChartProps> = ({ title, style, data, options
 
   return (
     <Line 
-      title={title ? title : "라인 그래프 제목"}
-      style={style ? style : {}}
+      style={{
+        backgroundColor: backgroundColor,
+        width: inputWidht,
+        height: inputHeight
+      }}
       data={chartData}
       options={options ? options : sampleOptions} />
   )

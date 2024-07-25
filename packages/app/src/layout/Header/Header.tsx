@@ -50,7 +50,7 @@ const useStyles = makeStyles(
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
-      // backgroundImage: theme.page.backgroundImage,
+      backgroundImage: theme.page.backgroundImage,
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       [theme.breakpoints.down('sm')]: {
