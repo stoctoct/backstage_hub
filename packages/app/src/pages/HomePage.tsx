@@ -4,19 +4,18 @@ import React, { PropsWithChildren, ComponentProps } from 'react';
 import { Link } from '../core_components/Link';
 // import { Header } from '../../layout/Header';
 import { HeaderLabel } from '../layout/HeaderLabel';
-// import { Page } from '../../layout/Page';
 import { PageWithHeader } from '../layout/Page';
+import { Page, Header, Content, TrendLine, GaugeCard } from '@backstage/core-components';
+import { LineChart } from '../components'
+
 import { renderInTestApp, TestApiProvider } from '@backstage/test-utils';
 import { configApiRef } from '@backstage/core-plugin-api';
 import { ConfigReader } from '@backstage/core-app-api';
-import { Page, Header, Content, TrendLine, GaugeCard } from '@backstage/core-components';
-import { LineChart } from '../components'
 // import {  } from '@backstage/core-components';
 
 // import { Chart, LineSeries, Axis, Tooltip } from '@backstage/core-components';
 
 const linkText = "링크 컴포넌트 테스트(네이버)"
-
 
 const CustomGaugeCard = () => {
   return (

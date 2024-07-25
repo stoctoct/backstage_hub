@@ -13,8 +13,9 @@ const config: StorybookConfig = {
   stories: [
     // '../packages/app/src/**/*.mdx',
     '../packages/app/src/components/**/*.stories.@(js|jsx|mjs|ts|tsx)',
-    // '../packages/app/src/stories/*.stories.@(js|jsx|mjs|ts|tsx)',
-    // '../packages/app/src/core_components/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+    '../packages/app/src/stories/*.stories.@(js|jsx|mjs|ts|tsx)',
+    '../packages/app/src/core_components/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+    '../packages/app/src/layout/**/*.stories.@(js|jsx|mjs|ts|tsx)',
     // '../packages/app/src/**/*.stories.@(js|jsx|mjs|ts|tsx)',
   ],
   addons: [
